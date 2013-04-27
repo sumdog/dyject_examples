@@ -27,3 +27,9 @@ if __name__ == '__main__':
 
    print('Client arch is {0}'.format(client.arch))
    print('Configuration Handler config objects: {0}'.format(config.configs))
+
+   other_a = ctx.get_class('OtherConfig',prototype=True)
+   other_b = ctx.get_class('OtherConfig',prototype=True)
+
+   if id(other_a) != id(other_b):
+     print('Other objects are distinct instances')
